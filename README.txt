@@ -272,8 +272,8 @@ Install Required Software From Source
 	Nginx
 		mkdir /var/jetendo-server/system/nginx-build
 		cd /var/jetendo-server/system/nginx-build
-		wget http://nginx.org/download/nginx-1.9.11.tar.gz
-		tar xvfz nginx-1.9.11.tar.gz
+		wget http://nginx.org/download/nginx-1.11.3.tar.gz
+		tar xvfz nginx-1.11.3.tar.gz
 		adduser --system --no-create-home --disabled-login --disabled-password --group nginx
 		
 		Put "sendfile off;" in nginx.conf on test server when using virtualbox shared folders
@@ -287,7 +287,7 @@ Install Required Software From Source
 			unzip master.zip -d /var/jetendo-server/system/nginx-build/
 			rm master.zip
 			
-		cd /var/jetendo-server/system/nginx-build/nginx-1.9.11/
+		cd /var/jetendo-server/system/nginx-build/nginx-1.11.3/
 		./configure --with-http_realip_module  --with-http_v2_module --prefix=/var/jetendo-server/nginx --user=nginx --group=nginx --with-http_ssl_module --with-http_gzip_static_module  --with-http_flv_module --with-http_mp4_module --with-http_stub_status_module  --add-module=/var/jetendo-server/system/nginx-build/ngx_devel_kit-master --add-module=/var/jetendo-server/system/nginx-build/set-misc-nginx-module-master
 		make
 		make install
